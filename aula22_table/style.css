@@ -1,0 +1,23 @@
+table {
+    width: 600px;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+table thead {
+    background-color: rgb(153, 151, 151);
+}
+
+tbody tr:hover {
+    background-color: #eee;
+}
+tbody td {
+    border-bottom: 1px solid #CCC;
+}
+tbody tr:nth-child(even) {
+    background-color: #f5dcdc;
+}
