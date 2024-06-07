@@ -23,3 +23,5 @@ let errorPassword = document.querySelector("#password");
 password.classList.add("error");
 errorPassword.classList.add("visible");
 
+// mudei algumas coisas
+
