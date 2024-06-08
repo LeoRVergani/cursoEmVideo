@@ -7,17 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="post" action="bla.php" enctype="multipart/form-data">
+        <input type="hidden" name="country" value="BR"> 
 
         <fieldset>
             <legend>Dados Pessoas</legend>
             <label for="">
                 Primeiro Nome: <br>
-                <input type="text" name="name" id="" required minlength="3">
+                <input type="text" name="name" id="" required minlength="3" maxlength="15">
             </label><br>
             <label for="">
                 Sobrenome: <br>
-                <input type="text" name="lastname" id="">
+                <input type="text" name="lastname" id="" >
+            </label><br>
+            <label for="">
+                Idade: <br>
+                <input type="number" name="age" id="" step="3" min="18" max="120">
+            </label><br>
+            <label for="">
+                Email: <br>
+                <input type="text" name="mail" id="" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" title="email válido">
+            </label><br>
+            <label for="">
+                Foto: <br>
+                <input type="file" name="arquivo" id="" accept="image/*">
             </label><br>
         </fieldset>
         
