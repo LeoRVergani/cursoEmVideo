@@ -11,15 +11,29 @@ let subtotalInfo = {
 };
 
 // Definir a manipular dos elementos capturados (Funções)
-quantidadeSubtotal.innerText = subtotalInfo.quantidade + " itens";
+function atualizarSubtotal(){
+  quantidadeSubtotal.innerText = subtotalInfo.quantidade + " itens";
 valorSubtotal.innerText = subtotalInfo.valor;
+}
+
+atualizarSubtotal()
+
 
 function adicionarUM(){
+  // Adicionar 1 à quantidade do produto
   qtdProduto01.value = Number(qtdProduto01.value) + 1
+
+  // Adicionar 1 ao subtotal
+  subtotalInfo.quantidade = subtotalInfo.quantidade + 1
+
+  // Atualizar o DOM
+  atualizarSubtotal()
 }
 
 function subtrairUm(){
   qtdProduto01.value = Number(qtdProduto01.value) - 1
+  subtotalInfo.quantidade = subtotalInfo.quantidade - 1
+  atualizarSubtotal()
 }
 
 
