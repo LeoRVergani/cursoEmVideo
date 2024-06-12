@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de .addEventListener()</title>
+</head>
+<body>
+    <button id="meuBotao">Clique para alterar estilos</button>
+
+    <script>
+        var botao = document.getElementById("meuBotao");
+
+        botao.addEventListener("click", function() {
+            botao.style.backgroundColor = "green";
+            botao.style.color = "white";
+            botao.style.border = "2px solid black";
+            botao.style.fontSize = "20px";
+        });
+    </script>
+</body>
+</html>

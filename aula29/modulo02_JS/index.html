@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de .addEventListener()</title>
+</head>
+<body>
+    <p id="meuParagrafo">Clique neste parágrafo para mudar sua cor de fundo.</p>
+
+    <script>
+        var paragrafo = document.getElementById("meuParagrafo");
+
+        paragrafo.addEventListener("click", function() {
+            paragrafo.style.backgroundColor = "yellow";
+        });
+    </script>
+</body>
+</html>
