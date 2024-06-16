@@ -8,6 +8,16 @@ let emailInput = document.getElementById("email");
 let emailLabel = document.querySelector('label[for="email"]');
 let emailHelper = document.getElementById("email-helper");
 
+// ---------- VALIDAÇÃO IDADE ---------- //
+let idadeInput = document.getElementById("idade");
+let idadeLabel = document.querySelector('label[for="idade"]');
+let idadeHelper = document.getElementById("idade-helper");
+
+// ---------- VALIDAÇÃO DA SENHA ---------- //
+let senhaInput = document.getElementById("senha");
+let senhaLabel = document.querySelector('label[for="senha"]');
+let senhaHelper = document.getElementById("senha-helper");
+
 function mostrarPopup(input, label){
     // Mostrar popup de campo obrigatório
     input.addEventListener("focus", function(){
@@ -22,6 +32,8 @@ function mostrarPopup(input, label){
 
 mostrarPopup(usernameInput, usernameLabel);
 mostrarPopup(emailInput, emailLabel);
+mostrarPopup(idadeInput, idadeHelper);
+mostrarPopup(senhaInput, senhaLabel);
 
 
 
@@ -55,5 +67,35 @@ emailInput.addEventListener("change", function(event){
         emailInput.classList.add("error")
         emailHelper.classList.add("visible")
         emailHelper.innerText = "Email inválido."
+    }
+})
+
+idadeInput.addEventListener("change", function(event){
+    let valor = event.target.value;
+
+    if(valor >= 18){
+        idadeInput.classList.remove("error")
+        idadeInput.classList.add("correct")
+        idadeHelper.classList.remove("visible")
+    } else {
+        idadeInput.classList.remove("correct")
+        idadeInput.classList.add("error")
+        idadeHelper.classList.add("visible")
+        idadeHelper.innerText = "Você tem que ser de maior para o cadastro."
+    }
+})
+
+senhaInput.addEventListener("change", function(event){
+    let valor = event.target.value;
+
+    if(valor.includes("@") || valor.includes(".com")){
+        senhaInput.classList.remove("error")
+        senhaInput.classList.add("correct")
+        senhaHelper.classList.remove("visible")
+    } else {
+        senhaInput.classList.remove("correct")
+        senhaInput.classList.add("error")
+        senhaHelper.classList.add("visible")
+        senhaHelper.innerText = "A senha deve conter caracteres especiais"
     }
 })
