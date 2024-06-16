@@ -42,3 +42,18 @@ usernameInput.addEventListener("change", function(event){
         usernameHelper.classList.remove("visible")
     }
 })
+
+emailInput.addEventListener("change", function(event){
+    let valor = event.target.value;
+
+    if(valor.includes("@")&& valor.includes(".com")){
+        emailInput.classList.remove("error")
+        emailInput.classList.add("correct")
+        emailHelper.classList.remove("visible")
+    } else {
+        emailInput.classList.remove("correct")
+        emailInput.classList.add("error")
+        emailHelper.classList.add("visible")
+        emailHelper.innerText = "Email inválido."
+    }
+})
