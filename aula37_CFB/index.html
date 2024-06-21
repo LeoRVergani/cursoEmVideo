@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto1">CFB Cursos</p>
+    <br>
+    <p id="texto2">Curso de jQuery</p>
+    <br>
+    <p id="resultado"></p>
+
+    <script>
+        $('#texto1').click((event)=>{
+            $('#resultado').text("x: " + event.pageX + ", Y:" + event.pageY)
+
+        })
+    </script>
+</body>
+</html>
