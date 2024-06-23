@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Evento de Movimento do Mouse</title>
+   e <style>
+        #area {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Mova o mouse aqui</div>
+    <p id="coordenadas"></p>
+
+    <script>
+        var area = document.getElementById("area");
+        var coordenadas = document.getElementById("coordenadas");
+
+        area.addEventListener("mousemove", function(event) {
+            coordenadas.textContent = "X: " + event.clientX + ", Y: " + event.clientY;
+            console.log("Mouse moveu para: (" + event.clientX + ", " + event.clientY + ")");
+        });
+    </script>
+</body>
+</html>

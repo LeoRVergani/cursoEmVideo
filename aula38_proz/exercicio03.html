@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Evento de Tecla Pressionada</title>
+</head>
+<body>
+    <input type="text" id="entrada" placeholder="Digite algo...">
+    <p id="saida"></p>
+
+    <script>
+        var entrada = document.getElementById("entrada");
+        var saida = document.getElementById("saida");
+
+        entrada.addEventListener("keydown", function(event) {
+            saida.textContent = "Tecla pressionada: " + event.key;
+            console.log("Tecla: " + event.key + " (Código: " + event.keyCode + ")");
+        });
+    </script>
+</body>
+</html>

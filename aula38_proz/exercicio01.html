@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Evento de Clique</title>
+</head>
+<body>
+    <button id="meuBotao">Clique em mim</button>
+    <p id="mensagem"></p>
+
+    <script>
+        var botao = document.getElementById("meuBotao");
+        var mensagem = document.getElementById("mensagem");
+
+        botao.addEventListener("click", function(event) {
+            mensagem.textContent = "Botão clicado!";
+            console.log("Tipo de evento: " + event.type);
+            console.log("Elemento alvo: " + event.target.id);
+        });
+    </script>
+</body>
+</html>
